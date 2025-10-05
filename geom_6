@@ -1,0 +1,47 @@
+#include <iostream>     //Задача 6
+#include <cmath>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "RU");
+
+	const int a = 4;
+	
+
+	int array1[a];
+	int array2[a];
+	for (int i = 0; i < a; i++) {
+		if (i < 2) {
+			cout << "Введите координаты X первого отрезка: ";
+			cin >> array1[i];
+			cout << "Введите координаты Y первого отрезка: ";
+			cin >> array2[i];
+		}
+		else {
+			cout << "Введите координаты X второго отрезка: ";
+			cin >> array1[i];
+			cout << "Введите координаты Y второго отрезка: ";
+			cin >> array2[i];
+		}
+	}
+
+	int x1 = array1[0];
+	int x2 = array1[1];
+	int x3 = array1[2];
+	int x4 = array1[3];
+	int y1 = array2[0];
+	int y2 = array2[1];
+	int y3 = array2[2];
+	int y4 = array2[3];
+
+	if ((x2 >= x4 && y2 >= y4 && x1 <= x3 && y1 <= y3) ||
+		(x2 <= x4 && y2 <= y4 && x1 >= x3 && y1 >= y3)) {
+		cout << "Отрезки пересекаются";
+	}
+	else
+	{
+		cout << "Отрезки не пересекаются";
+	}
+
+	
+	return 0;
+}

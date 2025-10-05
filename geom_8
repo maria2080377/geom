@@ -1,0 +1,24 @@
+#include <iostream>     //Задача 8
+#include <cmath>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "RU");
+
+	const int a = 2;
+	int array1[a];
+	int array2[a];
+
+	for (int i = 0; i < a; i++) {
+		cout << "Введите координаты X" << i + 1 << ": ";
+		cin >> array1[i];
+		cout << "Введите координаты Y" << i + 1 << ": ";
+		cin >> array2[i];
+	}
+
+	int x = array1[1] - array1[0];
+	int y = array2[1] - array2[0];
+	int m = pow(x * x + y * y, 0.5);
+	cout << "Длина отрезка равна: " << m;
+
+	return 0;
+}
